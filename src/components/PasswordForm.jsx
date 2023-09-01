@@ -46,20 +46,20 @@ export function PasswordForm({uppercase, lowercase, numbers, symbols, characters
           <span className="label-box"></span>
           <p>Include Symbols</p>
         </label>
-      </div>
-      <div className="strength-holder">
-        <div className="strength">
-          <p>Strength</p>
-          <h4>{passwordStrenghtLabel.label}</h4>
-          {new Array(4).fill(null).map(() => (
-            <span className={`pipe ${passwordStrenghtLabel.className}`}></span>
-          ))}
+        <div className="strength-holder">
+          <div className="strength">
+            <p>Strength</p>
+            <h4>{passwordStrenghtLabel.label}</h4>
+            {[1, 1, 1, 1].map(() => (
+              <span className={`pipe ${passwordStrenghtLabel.className}`}></span>
+            ))}
+          </div>
         </div>
+        <button disabled={isDisabled} onClick={handleGenerate}>
+          <p>Generate</p>
+          <img src="./assets/images/icon-arrow-right.svg" />
+        </button>
       </div>
-      <button disabled={isDisabled} onClick={handleGenerate}>
-        <p>Generate</p>
-        <img src="./assets/images/icon-arrow-right.svg" />
-      </button>
     </>
   );
 }

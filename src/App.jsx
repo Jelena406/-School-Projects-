@@ -1,5 +1,4 @@
-import {useState} from 'react';
-import './App.css';
+import React, {useState} from 'react';
 import {PasswordBox} from './components/PasswordBox';
 import {PasswordForm} from './components/PasswordForm';
 function App() {
@@ -17,6 +16,15 @@ function App() {
       <PasswordBox {...state} />
       <PasswordForm {...state} setState={setState} />
     </main>
+  );
+}
+
+function SSS() {
+  return (
+    <>
+      <h1>sss</h1>
+      <p>sssss</p>
+    </>
   );
 }
 
