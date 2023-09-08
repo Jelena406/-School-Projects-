@@ -1,21 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-export default function Footer() {
-  const [footerDetails, setFooterDetails] = useState({
-    rotationTime: '58.6 DAYS',
-    revolutionTime: '87.97 DAYS',
-    radius: '2,439.7km',
-    average: '430°C',
-  });
+export default function Footer({footerDetails = {}}) {
   return (
     <footer>
       <div>
         <p> ROTATION TIME</p>
-        <h3> {footerDetails.rotationTime}</h3>
+        <h3> {footerDetails.rotation}</h3>
       </div>
       <div>
         <p> REVOLUTION TIME</p>
-        <h3> {footerDetails.revolutionTime}</h3>
+        <h3> {footerDetails.revolution}</h3>
       </div>
       <div>
         <p> RADIUS</p>
@@ -23,7 +17,7 @@ export default function Footer() {
       </div>
       <div>
         <p> AVERAGE TEMP. </p>
-        <h3> {footerDetails.average}</h3>
+        <h3> {footerDetails.temperature}</h3>
       </div>
     </footer>
   );
