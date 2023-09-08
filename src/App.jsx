@@ -1,14 +1,16 @@
 import React from 'react';
 import Footer from './component/Footer';
+import {useState} from 'react';
 import Header from './components/Header';
 
 function App() {
+  const [currentPlanet, setCurrentPlanet] = useState('Mercury');
   const navigate = (planet) => {
-    console.log(planet);
+    setCurrentPlanet(planet);
   };
   return (
     <>
-      <Header navigate={navigate} />
+      <Header navigate={navigate} currentPlanet={currentPlanet} />
       <Footer />
     </>
   );

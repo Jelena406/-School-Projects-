@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header({navigate}) {
+export default function Header({navigate, currentPlanet}) {
   const planets = ['MERCURY', 'VENUS', 'EARTH', 'MARS', 'JUPITER', 'SATURN', 'URANUS', 'NEPTUNE'];
   return (
     <>
@@ -22,7 +22,11 @@ export default function Header({navigate}) {
               <div className="offcanvas-body">
                 <ul className="navbar-nav">
                   {planets.map((planet) => (
-                    <li key={planet} className={planet.toLowerCase()} onClick={() => navigate(planet)}>
+                    <li
+                      key={planet}
+                      className={`${planet.toLowerCase()} ${currentPlanet.toLowerCase() === planet.toLowerCase() ? 'active' : ''}`}
+                      onClick={() => navigate(planet)}
+                    >
                       {planet}
                       <img className="arrow" src="assets/images/icon-chevron.svg" />
                     </li>
@@ -34,7 +38,11 @@ export default function Header({navigate}) {
         </nav>
         <ul>
           {planets.map((planet) => (
-            <li key={planet} className={planet.toLowerCase()} onClick={() => navigate(planet)}>
+            <li
+              key={planet}
+              className={`${planet.toLowerCase()} ${currentPlanet.toLowerCase() === planet.toLowerCase() ? 'active' : ''}`}
+              onClick={() => navigate(planet)}
+            >
               {planet}
             </li>
           ))}
@@ -47,3 +55,5 @@ export default function Header({navigate}) {
 
 // kroz props primamo fiju navigate
 // navigate se poziva na klik na li i prosledjuje naziv trenutne planete na koju klikcemo
+
+// ako je current planet = nekom elemtu iz liste tom elementu dodati klasu active
