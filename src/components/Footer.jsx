@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import '../styles/Footer.css';
 
 export default function Footer() {
   const [footerDetails, setFooterDetails] = useState({

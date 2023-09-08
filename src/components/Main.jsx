@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import '../styles/Main.css';
 
 export default function Main() {
   const [mainDetails, setMainDetails] = useState({
