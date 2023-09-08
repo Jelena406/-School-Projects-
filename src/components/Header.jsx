@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Header.css';
 
 export default function Header({navigate}) {
   const planets = ['MERCURY', 'VENUS', 'EARTH', 'MARS', 'JUPITER', 'SATURN', 'URANUS', 'NEPTUNE'];
