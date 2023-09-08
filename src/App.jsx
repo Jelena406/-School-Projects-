@@ -1,5 +1,8 @@
+import React from 'react';
+import Footer from './component/Footer';
+
 function App() {
-  return null;
+  return <Footer />;
 }
 
 export default App;
