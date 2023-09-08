@@ -1,5 +1,10 @@
+import Header from './components/Header';
+
 function App() {
-  return null;
+  const navigate = (planet) => {
+    console.log(planet);
+  };
+  return <Header navigate={navigate} />;
 }
 
 export default App;
