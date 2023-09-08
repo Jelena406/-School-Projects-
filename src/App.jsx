@@ -1,5 +1,18 @@
+import Header from './components/Header';
+
 function App() {
-  return null;
+  const navigate = (planet) => {
+    console.log(planet);
+  };
+  return (
+    <>
+      <Header navigate={navigate} />
+      <h2>mica</h2>
+      <ul>
+        <li>test</li>
+      </ul>
+    </>
+  );
 }
 
 export default App;
