@@ -1,5 +1,7 @@
+import Main from './components/Main';
+
+import Footer from './components/Footer';
 import React, {useEffect} from 'react';
-import Footer from './component/Footer';
 import {useState} from 'react';
 import Header from './components/Header';
 import {getPlanetData} from './api';
@@ -23,6 +25,7 @@ function App() {
   return (
     <>
       <Header navigate={navigate} currentPlanet={currentPlanet} />
+      <Main mainDetails={currentPlanetData} />
       <Footer footerDetails={currentPlanetData} />
     </>
   );
