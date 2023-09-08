@@ -1,3 +1,6 @@
+import React from 'react';
+import Footer from './component/Footer';
+
 import Header from './components/Header';
 
 function App() {
@@ -7,10 +10,7 @@ function App() {
   return (
     <>
       <Header navigate={navigate} />
-      <h2>mica</h2>
-      <ul>
-        <li>test</li>
-      </ul>
+      <Footer />
     </>
   );
 }
