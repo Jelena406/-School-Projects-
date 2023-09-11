@@ -1,3 +1,5 @@
+
+
 import Main from './components/Main';
 
 import Footer from './components/Footer';
@@ -26,6 +28,7 @@ function App() {
     <>
       <Header navigate={navigate} currentPlanet={currentPlanet} />
       <Main mainDetails={currentPlanetData} />
+      <List />
       <Footer footerDetails={currentPlanetData} />
     </>
   );
