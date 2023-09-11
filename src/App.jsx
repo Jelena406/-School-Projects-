@@ -1,5 +1,4 @@
 import Main from './components/Main';
-
 import Footer from './components/Footer';
 import React, {useEffect} from 'react';
 import {useState} from 'react';
@@ -32,3 +31,5 @@ function App() {
 }
 
 export default App;
+
+// imamo jedan glavni branch, ime nije fiksno, najcesje je ili develop ili main, to je centralni na koji se spaja sav KeyboardEvent, on treba uvijek da bude osvjezen, moze se koristiti komanda git pull u terminalu ili u vs code u lijevom uglu 2 strelice, prije kreiranja novog brancha uvijek moramo biti sigurni da imamo zadnji branch i iz glavnog brancha pravimo novi

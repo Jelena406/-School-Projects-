@@ -6,7 +6,7 @@ export default function Header({navigate, currentPlanet}) {
     <>
       <nav>
         <h2>THE PLANETS</h2>
-        <nav className="navbar fixed-top">
+        <div className="navbar fixed-top">
           <div className="container-fluid">
             <a className="navbar-brand" href="#"></a>
             <button
@@ -35,7 +35,7 @@ export default function Header({navigate, currentPlanet}) {
               </div>
             </div>
           </div>
-        </nav>
+        </div>
         <ul>
           {planets.map((planet) => (
             <li
@@ -48,7 +48,6 @@ export default function Header({navigate, currentPlanet}) {
           ))}
         </ul>
       </nav>
-      <div className="line"></div>
     </>
   );
 }
