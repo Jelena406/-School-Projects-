@@ -5,19 +5,19 @@ export default function Footer({footerDetails = {}}) {
     <footer>
       <div>
         <p> ROTATION TIME</p>
-        <h1> {footerDetails.rotation}</h1>
+        <h3> {footerDetails.rotation}</h3>
       </div>
       <div>
         <p> REVOLUTION TIME</p>
-        <h1> {footerDetails.revolution}</h1>
+        <h3> {footerDetails.revolution}</h3>
       </div>
       <div>
         <p> RADIUS</p>
-        <h1> {footerDetails.radius}</h1>
+        <h3> {footerDetails.radius}</h3>
       </div>
       <div>
         <p> AVERAGE TEMP. </p>
-        <h1> {footerDetails.temperature}</h1>
+        <h3> {footerDetails.temperature}</h3>
       </div>
     </footer>
   );

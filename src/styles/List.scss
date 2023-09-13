@@ -13,7 +13,8 @@ h5, span {
     justify-content: space-between;
     gap: 40px;
     padding: 1rem;
-    border-bottom: 1px solid #f4f4f488;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    width: 100%;
   }
 
   span {
@@ -28,11 +29,50 @@ h5, span {
 h5{
   color:#fff;
   opacity: 0.5;
+ 
 }
 
-.list .active{
-  
-  color: #fff;
+ .list-planets{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    height: 4px;
+  }
+  &.mercury::before{
+    background-color: #419EBB;
+  }
+
+  &.venus::before{
+    background-color: var(--venus);
+  }
+
+  &.earth::before{
+    background-color: var(--earth);
+  }
+
+  &.mars::before{
+    background-color: var(--mars);
+  }
+
+  &.jupiter::before{
+    background-color: var(--jupiter);
+  }
+
+  &.saturn::before{
+    background-color: var(--saturn);
+  }
+
+  &.uranus::before{
+    background-color: var(--uranus);
+  }
+
+  &.neptune::before{
+    background-color: var(--neptune);
+  }
  }
 
 }
@@ -44,6 +84,8 @@ h5{
     flex-direction: column;
     gap: 1rem;
     border-bottom: 0;
+    grid-column: span 2;
+    order: 1;
   }
 
   .list-planets {
@@ -54,6 +96,39 @@ h5{
     border: 1px solid #d9d1d188;
     width: 281px;
     height: 40px;
+
+  
+    &.mercury{
+      background-color: #419EBB;;
+    }
+  
+    &.venus{
+      background-color: var(--venus);
+    }
+  
+    &.earth{
+      background-color: var(--earth);
+    }
+  
+    &.mars{
+      background-color: var(--mars);
+    }
+  
+    &.jupiter{
+      background-color: var(--jupiter);
+    }
+  
+    &.saturn{
+      background-color: var(--saturn);
+    }
+  
+    &.uranus{
+      background-color: var(--uranus);
+    }
+  
+    &.neptune{
+      background-color: var(--neptune);
+    }
   }
 
 
@@ -82,6 +157,8 @@ h5{
     flex-direction: column;
     gap: 1rem;
     margin-top: 25px;
+    margin-right: 50px;
+
   }
   
 
@@ -91,7 +168,7 @@ h5{
     gap: 2rem;
     background-color: #070724;
     border: 1px solid #d9d1d188;
-    width: 350px;
+    width: 400px;
     padding: 1.5rem;
   }
 

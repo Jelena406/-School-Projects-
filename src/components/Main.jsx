@@ -8,10 +8,9 @@ export default function Main({mainDetails = {}, listItem}) {
   return (
     <>
       <div className="img">
-        <img className="planet-img" src={mainDetails?.images?.planet} alt="" />
+        {listItem === 'geology' && <img className="planet-geology" src={mainDetails?.images?.planet} alt="" />}
+        <img className="planet-img" src={mainDetails?.images?.[imageMap[listItem]]} alt="" />
       </div>
-      {listItem === 'geology' && <img className="planet-img" src={mainDetails?.images?.planet} alt="" />}
-      <img className="planet-img" src={mainDetails?.images?.[imageMap[listItem]]} alt="" />
       <div className="main-text">
         <div className="description">
           <h1>{mainDetails.name}</h1>

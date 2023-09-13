@@ -5,7 +5,6 @@ import React, {useEffect} from 'react';
 import {useState} from 'react';
 import Header from './components/Header';
 import {getPlanetData} from './api';
-import List from './components/List';
 
 function App() {
   const [currentPlanet, setCurrentPlanet] = useState('Mercury');
@@ -13,6 +12,7 @@ function App() {
   const [listItem, setListItem] = useState('overview');
   const navigate = (planet) => {
     setCurrentPlanet(planet);
+    document.querySelector('.navbar-toggler').click();
   };
 
   const getData = async () => {
@@ -29,7 +29,7 @@ function App() {
       <Header navigate={navigate} currentPlanet={currentPlanet} />
       <main>
         <Main mainDetails={currentPlanetData} listItem={listItem} />
-        <List setListItem={setListItem} listItem={listItem} />
+        <List setListItem={setListItem} listItem={listItem} currentPlanet={currentPlanet.toLowerCase()} />
         <Footer footerDetails={currentPlanetData} />
       </main>
     </>
