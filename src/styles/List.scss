@@ -7,6 +7,10 @@ h5, span {
   cursor: pointer;
 }
 
+.img img{
+  width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
   .list {
     display: flex;
