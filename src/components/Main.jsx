@@ -6,9 +6,11 @@ const imageMap = {
 };
 export default function Main({mainDetails = {}, listItem}) {
   return (
-    <main>
-      {listItem === 'geology' && <img className="planet-img" src={mainDetails?.images?.planet} alt="" />}
-      <img className="planet-img" src={mainDetails?.images?.[imageMap[listItem]]} alt="" />
+    <>
+      <div className="img">
+        {listItem === 'geology' && <img className="planet-geology" src={mainDetails?.images?.planet} alt="" />}
+        <img className="planet-img" src={mainDetails?.images?.[imageMap[listItem]]} alt="" />
+      </div>
       <div className="main-text">
         <div className="description">
           <h1>{mainDetails.name}</h1>
@@ -22,6 +24,6 @@ export default function Main({mainDetails = {}, listItem}) {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }

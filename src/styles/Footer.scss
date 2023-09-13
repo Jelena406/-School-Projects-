@@ -2,48 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
 
 footer {
-  display: flex;
-  justify-content: space-evenly;
   background-color: #070724;
   color: white;
-  padding: 1rem;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4,1fr);
+  grid-column: span 4;
 }
 
 footer p {
   color: #fff;
   opacity: 0.5;
-  font-size: 14px;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 1.5px;
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
+
 footer h3 {
   font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 footer > div {
+  width: 90%;
   border: 2px solid hsla(255, 100%, 100%, 0.2);
-  padding: 1.5rem;
+  padding-inline: 1rem;
 }
 
 @media only screen and (max-width: 767px) {
   footer {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    align-items: stretch;
+    margin-top: 0;
+    order: 4;
+    gap: 10px;
   }
+
   footer p {
-    color: #fff;
-    font-size: 12px;
+    font-size: 8px;
     padding: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.727px;
+    margin: 0;
   }
+
   footer h3 {
     font-size: 20px;
     font-weight: 400;
+    margin: 0;
   }
+
   footer > div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
   }
 }

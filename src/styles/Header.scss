@@ -9,12 +9,22 @@
   --neptune: #497EFA; 
 }
 
+:root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 3.5rem;
+}
 
 nav{
   background-color:  #070724;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255, .2);
+  
+  
 ul{
   background-color:  #070724;
   display: flex;
@@ -46,8 +56,6 @@ margin-top: 10px;
 margin-right: 20px;
 }
 
-
-
 li{
 font-family: Spartan;
 color: #FFF;
@@ -57,13 +65,7 @@ font-weight: 700;
 line-height: 25px;
 letter-spacing: 1px;
 opacity: 0.8;
-}
-
-.line{
-  width: 100%;
-  height: 1px;
-  background: #FFF;
-  opacity: 0.2;
+cursor: pointer;
 }
 
 .navbar{
@@ -80,12 +82,13 @@ opacity: 0.8;
   nav{
     display: flex;
     flex-wrap: wrap;
-    
+
   }
 
   h2{
     width: 100%;
     text-align: center;
+    padding: 1rem;
   }
 
   ul{
@@ -121,8 +124,8 @@ opacity: 0.8;
   .nav-link{
     color: #FFF;
   }
-nav{
 
+nav{
 
   ul{
     display: none;
