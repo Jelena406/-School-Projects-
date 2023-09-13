@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 
 export default function Main({mainDetails = {}}) {
   return (
-    <main>
-      <img className="planet-img" src={mainDetails?.images?.planet} alt="" />
+    <>
+      <div className="img">
+        <img className="planet-img" src={mainDetails?.images?.planet} alt="" />
+      </div>
       <div className="main-text">
         <div className="description">
           <h1>{mainDetails.name}</h1>
@@ -17,6 +19,6 @@ export default function Main({mainDetails = {}}) {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }

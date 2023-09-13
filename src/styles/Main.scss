@@ -1,10 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/spartan');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
 
-
 main{
    color: #ffff;
-   display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    place-items: center;
 }
 
 main h1{
@@ -28,23 +30,29 @@ opacity: 0.8;
     gap: 8px;
     opacity: 0.5;
     margin-top: 35px;
-    justify-content: center;
 }
 
 .source a{
     color: #ffff;
+    font-weight: 700;
+    font-family: Spartan;
 }
 
 .source img{
     margin-left: 5px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     main{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 3rem;
+    }
+
+    .img{
+        padding: 5rem;
     }
 
     h1{
@@ -53,20 +61,17 @@ opacity: 0.8;
     }
 
     .main-text{
+        display: flex;
+        flex-direction: column;
         text-align: center;
         margin-inline: 24px;
     }
-
-    .planet-img{
-        width: 111px;
-    }
-    
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) and (max-width: 1024px) {
 
     main{
-        justify-content: space-evenly;
+        
         margin-top: 60px;
     }
 
@@ -74,13 +79,12 @@ opacity: 0.8;
         font-size: 48px;
     }
 
-    .planet-img{
-        width: 184px;
+    .img{
+        grid-column: span 4;
     }
 
     .main-text{
-        display: flex;
-        text-align: left;
+        grid-column: span 3;
         margin-inline:40px;
     }
 
@@ -94,26 +98,24 @@ opacity: 0.8;
 }
 
 @media screen and (min-width:992px){
-
-    main{
-        align-items: center;
-    }
-   
+  
     main h1{
         font-size: 80px;
         margin-bottom: 23px;
     }
-
-    .planet-img{
-        width: 290px;
-        height: 290px;
+    
+    .img{
+    grid-column: span 3;
+    grid-row: span 2;
     }
 
     .main-text{
-        flex-direction: column;
-    }
+    margin-top: 30px;
+}
 
-    .description{
-        width: 400px;
-    }
+.description{
+p{
+    margin-left: 0;
+}
+} 
 }

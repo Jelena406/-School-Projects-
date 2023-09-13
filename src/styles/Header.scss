@@ -9,6 +9,13 @@
   --neptune: #497EFA; 
 }
 
+:root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 3.5rem;
+}
 
 nav{
   background-color:  #070724;
@@ -58,6 +65,7 @@ font-weight: 700;
 line-height: 25px;
 letter-spacing: 1px;
 opacity: 0.8;
+cursor: pointer;
 }
 
 .navbar{
