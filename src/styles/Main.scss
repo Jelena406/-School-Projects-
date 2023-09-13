@@ -47,7 +47,7 @@ opacity: 0.8;
     position: relative;
 }
 
-.planet-img{
+.planet-img.geology{
     position: absolute;
     width: 30%;
     bottom: -25px;
@@ -75,12 +75,13 @@ opacity: 0.8;
         bottom: 0;
         padding: 2rem;
         margin-top: 50px;
+        text-align: center;
     }
 
     .planet-img{
         bottom: 0;
     }
-    
+
     main h1{
         font-size: 40px;
         margin-top: 32px;
