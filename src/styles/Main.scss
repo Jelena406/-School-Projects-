@@ -7,6 +7,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0 auto;
     place-items: center;
+  
 }
 
 main h1{
@@ -42,6 +43,23 @@ opacity: 0.8;
     margin-left: 5px;
 }
 
+.img{
+    position: relative;
+}
+
+.planet-img{
+    position: absolute;
+    width: 30%;
+    bottom: -25px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.planet-geology{
+    width: 100%;
+}
+
 @media screen and (max-width:767px) {
     main{
         display: flex;
@@ -52,10 +70,19 @@ opacity: 0.8;
     }
 
     .img{
-        padding: 5rem;
+        order: 2;
+        width: 100%;
+        bottom: 0;
+        padding: 2rem;
+        margin-top: 50px;
     }
 
-    h1{
+    .planet-img{
+        bottom: 0;
+    }
+    
+    main h1{
+        font-size: 40px;
         margin-top: 32px;
         margin-bottom: 16px;
     }
@@ -65,13 +92,18 @@ opacity: 0.8;
         flex-direction: column;
         text-align: center;
         margin-inline: 24px;
+        order: 3;
+    }
+
+    .source{
+        display: flex;
+        justify-content: center;
     }
 }
 
 @media screen and (min-width:768px) and (max-width: 1024px) {
 
     main{
-        
         margin-top: 60px;
     }
 
@@ -81,11 +113,13 @@ opacity: 0.8;
 
     .img{
         grid-column: span 4;
+        margin-bottom: 50px;
     }
 
     .main-text{
-        grid-column: span 3;
+        grid-column: span 2;
         margin-inline:40px;
+        margin-top: 50px;
     }
 
     .source{
@@ -110,7 +144,9 @@ opacity: 0.8;
     }
 
     .main-text{
+    grid-column: span 1;
     margin-top: 30px;
+   
 }
 
 .description{
