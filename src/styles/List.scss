@@ -1,0 +1,197 @@
+h5, span {
+  font-family: Spartan;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.img img{
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    width: 100%;
+  }
+
+  span {
+    display: none;
+  }
+
+  .list-planets p {
+    display: none;
+  }
+
+
+h5{
+  color:#fff;
+  opacity: 0.5;
+ 
+}
+
+ .list-planets{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    height: 4px;
+  }
+  &.mercury::before{
+    background-color: #419EBB;
+  }
+
+  &.venus::before{
+    background-color: var(--venus);
+  }
+
+  &.earth::before{
+    background-color: var(--earth);
+  }
+
+  &.mars::before{
+    background-color: var(--mars);
+  }
+
+  &.jupiter::before{
+    background-color: var(--jupiter);
+  }
+
+  &.saturn::before{
+    background-color: var(--saturn);
+  }
+
+  &.uranus::before{
+    background-color: var(--uranus);
+  }
+
+  &.neptune::before{
+    background-color: var(--neptune);
+  }
+ }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 0;
+    grid-column: span 2;
+  }
+
+  .list-planets {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #070724;
+    border: 1px solid #d9d1d188;
+    width: 281px;
+    height: 40px;
+
+  
+    &.mercury{
+      background-color: #419EBB;;
+    }
+  
+    &.venus{
+      background-color: var(--venus);
+    }
+  
+    &.earth{
+      background-color: var(--earth);
+    }
+  
+    &.mars{
+      background-color: var(--mars);
+    }
+  
+    &.jupiter{
+      background-color: var(--jupiter);
+    }
+  
+    &.saturn{
+      background-color: var(--saturn);
+    }
+  
+    &.uranus{
+      background-color: var(--uranus);
+    }
+  
+    &.neptune{
+      background-color: var(--neptune);
+    }
+  }
+
+
+  h5 {
+    display: flex;
+    gap: 1rem;
+    color: #ffffff;
+  }
+
+  span {
+    display: block;
+  }
+
+  .list-planets p {
+    display: block;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    color: #f4f4f488;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 25px;
+    margin-right: 50px;
+    grid-column: -1/4;
+    order: initial;
+  }
+  
+
+  .list-planets {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #070724;
+    border: 1px solid #d9d1d188;
+    width: 400px;
+    padding: 1.5rem;
+  }
+
+  .list-planets:hover{
+    background-color: #D8D8D8;
+    color: #fff;
+  }
+
+  span {
+    display: block;
+  }
+
+  .list{
+  p {
+    color: #f4f4f488;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  }
+
+}

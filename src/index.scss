@@ -1,0 +1,23 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+@import url('https://fonts.cdnfonts.com/css/spartan');
+
+@import './styles/Header.scss';
+@import './styles/Main.scss';
+@import './styles/List.scss';
+@import './styles/Footer.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Antonio, Spartan;
+}
+
+
+body{
+  font-family: 'Antonio', sans-serif;
+  background-image: url('/assets/background.svg');
+  background-size: contain;
+  background-color: #070724;
+}

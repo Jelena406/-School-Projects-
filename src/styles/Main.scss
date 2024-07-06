@@ -1,0 +1,158 @@
+@import url('https://fonts.cdnfonts.com/css/spartan');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
+
+main{
+   color: #ffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    place-items: center;
+  
+}
+
+main h1{
+    font-size: 80px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+p{
+color: #FFF;
+font-family: Spartan;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+opacity: 0.8;
+}
+
+.source{
+    display: flex;
+    gap: 8px;
+    opacity: 0.5;
+    margin-top: 35px;
+}
+
+.source a{
+    color: #ffff;
+    font-weight: 700;
+    font-family: Spartan;
+}
+
+.source img{
+    margin-left: 5px;
+}
+
+.img{
+    position: relative;
+}
+
+.planet-img.geology{
+    position: absolute;
+    width: 30%;
+    bottom: -25px;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.planet-geology{
+    width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .img{
+        order: 2;
+        width: 100%;
+        bottom: 0;
+        padding: 2rem;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .planet-img{
+        bottom: 0;
+    }
+
+    main h1{
+        font-size: 40px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    .main-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-inline: 24px;
+        order: 3;
+    }
+
+    .source{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
+    main{
+        margin-top: 60px;
+    }
+
+    main h1{
+        font-size: 48px;
+    }
+
+    .img{
+        grid-column: span 4;
+        margin-bottom: 50px;
+    }
+
+    .main-text{
+        grid-column: span 2;
+        margin-inline:40px;
+        margin-top: 50px;
+    }
+
+    .source{
+        justify-content: flex-start;
+    }
+
+    .description{
+        margin-right: 2.6rem;
+    }
+}
+
+@media screen and (min-width:992px){
+  
+    main h1{
+        font-size: 80px;
+        margin-bottom: 23px;
+    }
+    
+    .img{
+    grid-column: span 3;
+    grid-row: span 2;
+    }
+
+    .main-text{
+    grid-column: span 1;
+    margin-top: 30px;
+   
+}
+
+.description{
+p{
+    margin-left: 0;
+}
+} 
+}
