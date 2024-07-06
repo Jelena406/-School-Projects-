@@ -1,0 +1,3 @@
+[submodule "entertainment-app"]
+	path = entertainment-app
+	url = git@github.com:iSchoolProjects/entertainment-app.git
